@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+    color: white;
+}
+
+body {
+    background-color: #1f2933;
+}
+
+header {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 80px;
+}
+
+header h4{
+    position: absolute;
+    left: 10%;
+    bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+/* Splash Screen */
+
+.intro {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #161616;
+    transition: 1s;
+}
+
+.logo-header {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+}
+
+.logo {
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+}
+
+.logo.active {
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+
+.logo.fade {
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #3e4c59
+}
+
+.nav-link {
+    margin-left: 1.5em;
+    margin-right: 1em;
+    font-size: 1.5em;
+    color: white;
+}
+
+.navbar-brand img{
+    margin-left: 1em;
+    width: 50px;
+}
+
+/* Main Container */
+#main-container {
+    display: flex;
+}
+
+/* Left Half*/
+#left {
+    padding: 2em;
+    width: 50%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+#typing-container{
+    align-items: center;
+    width: 60%;
+}
+
+.blinking {
+    animation-name: blinkingText;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blinkingText{
+    0% {color: white;} 
+    50% {color: transparent} 
+    100% {color: white;}
+}
+
+.blinking2 {
+    animation-name: blinkingText2;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blinkingText2{
+    0% {color: #F44336;} 
+    50% {color: transparent} 
+    100% {color: #F44336;}
+}
+
+#cursor {
+    color: white;
+    font-size: 3em;
+}
+
+#cursor2 {
+    color: #F44336;
+    font-size: 6em;
+}
+
+#greeting span.text {
+    font-size: 3em;
+}
+
+#name span.text {
+    font-size: 8em;
+    color: #F44336;
+}
+
+/* Right Half */
+#right {
+    width: 50%;
+    height: 70vh;
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#intro-text {
+    text-align: center;
+    margin-top: 2em;
+    font-size: 1.5em;
+    padding: 1em;
+}
+
+#buttons {
+    margin-top: 4em;
+    display: flex;
+    justify-content: space-around;
+}
+
+#github, #linkedin{
+    width: 4em;
+    height: 4em;
+}
+
+#gmail {
+    width: 4.5em;
+}
